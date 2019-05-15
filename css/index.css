@@ -134,3 +134,13 @@ html,
 body {
   height: 100%;
 }
+h1 {
+  color: #A1DAD7;
+  font-family: 'Comfortaa', cursive;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto Condensed', sans-serif;
+}

@@ -57,3 +57,24 @@ html, body {
     height: 100%;
 }
 
+@headerFont: 'Comfortaa', cursive;
+@headerColor: #A1DAD7;
+@mainText: 'Roboto Condensed', sans-serif;
+
+h1 {
+	color: @headerColor;
+	font-family: @headerFont;
+  }
+
+.center() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+// header and nav
+
+
+nav {
+	.center;
+	font-family: @mainText;
+	}
