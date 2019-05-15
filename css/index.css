@@ -134,6 +134,9 @@ html,
 body {
   height: 100%;
 }
+.container {
+  max-width: 800px;
+}
 h1 {
   color: #A1DAD7;
   font-family: 'Comfortaa', cursive;
@@ -142,5 +145,18 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 20px auto;
+}
+nav a {
   font-family: 'Roboto Condensed', sans-serif;
+  color: #013E62;
+  text-decoration: none;
+  margin: 0 50px;
+}
+nav a:hover {
+  color: #A1DAD7;
+}
+img {
+  display: flex;
+  align-items: flex-start;
 }

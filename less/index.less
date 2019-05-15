@@ -57,24 +57,68 @@ html, body {
     height: 100%;
 }
 
+// Container
+
+.container {
+	max-width: 800px;
+	media(max-width: 500px) {
+	}
+}
+
+
+// Variables
+
 @headerFont: 'Comfortaa', cursive;
 @headerColor: #A1DAD7;
 @mainText: 'Roboto Condensed', sans-serif;
+@mainTextColor: #013E62;
+
+// MixIns
+
+.navPlacement() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.sectionMargins;
+}
+
+.sectionMargins() {
+	margin: 20px auto;
+
+}
+
+.links() {
+	font-family: @mainText;
+	color: @mainTextColor;
+	text-decoration: none;
+}
+
+// Elements
 
 h1 {
 	color: @headerColor;
 	font-family: @headerFont;
   }
 
-.center() {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-// header and nav
 
+// Nav
 
 nav {
-	.center;
-	font-family: @mainText;
+	.navPlacement;
+	a {
+		.links;
+		margin: 0 50px;
 	}
+	a:hover {
+		color: @headerColor;
+	}
+}
+
+
+// Main Content
+
+img {
+	display: flex;
+	align-items: flex-start;
+
+}
