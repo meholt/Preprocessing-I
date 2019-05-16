@@ -133,13 +133,26 @@ table {
 html,
 body {
   height: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-color: #013E62;
+  line-height: 1.25em;
 }
 .container {
   max-width: 800px;
 }
-h1 {
+h1,
+h2,
+h3 {
   color: #A1DAD7;
   font-family: 'Comfortaa', cursive;
+}
+ul {
+  list-style: none;
+}
+ul li::before {
+  content: "\25B9";
+  font-size: 1.25em;
+  color: #A1DAD7;
 }
 nav {
   display: flex;
@@ -156,7 +169,10 @@ nav a {
 nav a:hover {
   color: #A1DAD7;
 }
-img {
+.left-content {
+  margin-left: 150px;
+}
+.right-content {
   display: flex;
-  align-items: flex-start;
+  margin-left: 700px;
 }
