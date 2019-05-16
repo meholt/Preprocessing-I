@@ -54,6 +54,89 @@ table {
 }
 
 html, body {
-    height: 100%;
+		height: 100%;
+		font-family: @mainText;
+		font-color: @mainTextColor;
+		line-height: 1.25em;
 }
 
+// Container
+
+.container {
+	max-width: 800px;
+	media(max-width: 500px) {
+	}
+}
+
+
+// Variables
+
+@headerFont: 'Comfortaa', cursive;
+@headerColor: #A1DAD7;
+@mainText: 'Roboto Condensed', sans-serif;
+@mainTextColor: #013E62;
+@bullet: "\25B9";
+
+// MixIns
+
+.navPlacement() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.sectionMargins;
+}
+
+.sectionMargins() {
+	margin: 20px auto;
+
+}
+
+.links() {
+	font-family: @mainText;
+	color: @mainTextColor;
+	text-decoration: none;
+}
+
+// Elements
+
+h1, h2, h3 {
+	color: @headerColor;
+	font-family: @headerFont;
+	}
+	
+	ul {
+		list-style: none;
+	}
+
+	ul li::before {
+		content: @bullet;
+		font-size: 1.25em;
+		color: @headerColor;
+	}
+
+// Nav
+
+nav {
+	.navPlacement;
+	a {
+		.links;
+		margin: 0 50px;
+	}
+	a:hover {
+		color: @headerColor;
+	}
+}
+
+
+// Main Content
+
+.left-content {
+	margin-left: 150px;
+}
+
+.right-content {
+	display: flex;
+
+	margin-left: 700px;
+
+}
